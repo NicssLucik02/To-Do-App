@@ -1,21 +1,19 @@
 import React from 'react';
-import './App.scss';
-
-interface Props {
-  onClick: () => void;
-  children: React.ReactNode;
-}
-
-export const Provider: React.FC<Props> = React.memo(({ onClick, children }) => (
-  <button type="button" onClick={onClick}>
-    {children}
-  </button>
-));
+import { TodoApp } from './components/TodoApp/TodoApp';
+// eslint-disable-next-line max-len
+import { ErrorNotification } from './components/ErrorNotification/ErrorNotification';
+import { useErrorReset } from './hooks/useErrorReset';
 
 export const App: React.FC = () => {
+  const { currentError, setCurrentError } = useErrorReset();
+
   return (
-    <div className="starter">
-      <Provider onClick={() => ({})}>TodoList</Provider>
-    </div>
+    <>
+      <ErrorNotification
+        currentError={currentError}
+        handleHideError={() => setCurrentError('')}
+      />
+      <TodoApp setCurrentError={setCurrentError} />
+    </>
   );
 };

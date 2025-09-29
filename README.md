@@ -1,9 +1,28 @@
-# React TypeScript Starter Pack
+ToDo App
+A simple task management application that allows users to add, complete, and delete tasks. The purpose of the project is to practice building React applications with component-based architecture, state management, and basic user interaction.
 
-To use this template click `Use this template`
+Live Demo Link [https://NicssLucik02.github.io/to-do-app/]
 
-### Available Scripts
+Technologies Used:
+React (v18+)
+TypeScript (v5+)
+Bulma CSS framework (v0.9.4)
+SCSS / custom styles
+classNames utility (v2.3.2)
 
-`Deploy` - available to deploy your application to gh-pages, to deploy the project, change the second line of code in package.json, specifically the homepage value, from "." to the repository name
+Development & Deployment
+Vite (v5+)
+ESLint (v8+)
+npm (v10+)
 
-`SCSS Preprocessor` - available to write your styles with modern style language
+Getting Started:
+git clone https://github.com/NicssLucik02/To-Do-App.git
+cd To-Do-App
+npm install
+npm start
+
+Features:
+Add new tasks
+Mark tasks as completed
+Delete tasks
+Responsive design
